@@ -1,0 +1,37 @@
+<div class="footer__row">
+    <div class="footer__col">
+        <h3 class="footer__title">Contact</h3>
+        <div class="footer__content">
+            <div class="footer__phone">{{config path="general/store_information/phone"}}</div>
+            <div class="footer__item">1316 Abbot Kinney Blvd.</div>
+            <div class="footer__item">Copenhagen CA 90291</div>
+            {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="perfis_footer" redes="all"}}
+        </div>
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">Help</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="help"}}
+        </div>
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">About Us</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="about-us"}}
+        </div>
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">customer services</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="customer-services"}}
+        </div>
+    </div>
+</div>
+<div class="footer__row footer__row--copyright">
+    <div class="footer__copyright">
+        {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="footer-texto-2"}}
+    </div>
+    <div class="footer__payment">
+        {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+    </div>
+</div>

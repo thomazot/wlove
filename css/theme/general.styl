@@ -1,32 +1,25 @@
 
 /**
-* Mixins
-*/
-
+ * Mixins
+ */
 /**
-* Mixin - Font-weight
-*/
+ * Mixin - Font-weight
+ */
 light = 300
 regular = 400
 medium = 500
 semibold = 600
 bold = 700
-
-
-
 /**
-* Mixin - Viewport
-*/
-viewport = 1160px
-
-
+ * Mixin - Viewport
+ */
+viewport = 1290px
 /**
-* Mixin - Responsive
-* @media (max-width screen-sm-min)
-* @media (max-width screen-md-min)
-* @media (max-width screen-lg-min)
-*/
-// Smaller devices (phones, 320px and down)
+ * Mixin - Responsive
+ * @media (max-width screen-sm-min)
+ * @media (max-width screen-md-min)
+ * @media (max-width screen-lg-min)
+ */
 screen-xxs = 320px
 // Small devices (phones, 568px and down)
 screen-xs = 568px
@@ -37,60 +30,118 @@ screen-md = 992px
 // Medium devices (desktops, 1200px and down)
 screen-lg = 1200px
 
-
 /*
-* Global
-* Elementos globais que podem ser extendidos ao longo do documento
-*/
+ * Global
+ * Elementos globais que podem ser extendidos ao longo do documento
+ */
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap')
+
+@font-face
+    font-family: 'Nexa'
+    src: url('../../../files/NexaLight.eot?#iefix') format('embedded-opentype'), url('../../../files/NexaLight.otf') format('opentype'), url('../../../files/NexaLight.woff') format('woff'), url('../../../files/NexaLight.ttf') format('truetype'), url('../../../files/NexaLight.svg#NexaLight') format('svg')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'Nexa'
+    src: url('../../../files/NexaBold.eot?#iefix') format('embedded-opentype'), url('../../../files/NexaBold.otf') format('opentype'), url('../../../files/NexaBold.woff') format('woff'), url('../../../files/NexaBold.ttf') format('truetype'), url('../../../files/NexaBold.svg#NexaBold') format('svg')
+    font-weight: bold
+    font-style: normal
+
 .container
-  min-width: 0
-  max-width: viewport
-  margin 0 auto
-  width: auto
+    min-width: 0
+    max-width: viewport
+    margin: 0 auto
+    width: auto
 
+font-two = unquote("'Libre Baskerville', serif")
 
 /*
-* Base
-* Estilo base do elementos do Html
-*/
+ * Base
+ * Estilo base do elementos do Html
+ */
+html
+    background: #fff
+
 body
-  font-family: 'Exo 2', sans-serif
+    font-family: 'Nexa', sans-serif
+    font-weight: normal
 
-
-/*
-* Components
-* Componentes que se adaptam ao contexto
-*/
+.wrapper-container
+    padding-top: 75px
 
 /*
-* Component - Menssagens
-*/
+ * Components
+ * Componentes que se adaptam ao contexto
+ */
+/*
+ * Component - Menssagens
+ */
 .messages
-  > li
-    display block
-    padding 10px 20px
-    margin-bottom 20px
-    font-size 14px
-  .success-msg
-    border 1px solid #2baf60
-    background #c8efc0
-    color #1d904b
-  .error-msg
-    border 1px solid #d92100
-    background #ffdcdc
-    color #d92100
-  .notice-msg
-    border 1px solid #f7be07
-    background #f9f0d5
-    color #f7be07
+    > li
+        display: block
+        padding: 10px 20px
+        margin-bottom: 20px
+        font-size: 14px
+
+    .success-msg
+        border: 1px solid #2baf60
+        background: #c8efc0
+        color: #1d904b
+
+    .error-msg
+        border: 1px solid #d92100
+        background: #ffdcdc
+        color: #d92100
+
+    .notice-msg
+        border: 1px solid #f7be07
+        background: #f9f0d5
+        color: #f7be07
 
 /*
-* State
-* Estado global do Layout
-*/
+ * State
+ * Estado global do Layout
+ */
+.main-container
+    width: viewport
+    max-width: 100%
 
+.main-container
+    .cms-home &
+        max-width: 100%
+
+        .products
+            width: viewport
+            max-width: 100%
+            margin: 0 auto
+
+    body:not(.cms-home) &
+        margin: 50px auto
+
+.catalog-category-view
+    .breadcrumb
+        display: none
 
 /*
-* Theme
-* Customização de components ou layout, hacks !importants e etc
-*/
+ * Theme
+ * Customização de components ou layout, hacks !importants e etc
+ */
+@import 'components/header'
+@import 'components/logo'
+@import 'components/categories'
+@import 'components/mymenu'
+@import 'components/myaccount'
+@import 'components/search'
+@import 'components/mywish'
+@import 'components/mycart'
+@import 'components/footer'
+@import 'components/banner'
+@import 'components/products'
+@import 'components/blog'
+@import 'components/instagram'
+@import 'components/filters'
+@import 'components/breadcrumb'
+// Pages
+@import 'pages/category'
+@import 'pages/product'

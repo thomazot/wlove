@@ -1,0 +1,116 @@
+.categories
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 200
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.5)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.2s ease
+
+    &__show
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-flow: column nowrap
+        width: 30px
+        height: 48px
+        font-size: 0
+        background: #fff
+        border-radius: 0
+        box-shadow: none
+
+        &:before, &:after
+            content: ''
+            display: block
+            width: 18px
+            height: 1px
+            background: #000
+
+        span
+            display: block
+            width: 18px
+            height: 1px
+            background: #000
+            margin: 4px 0
+
+        &:hover
+            background: #fff
+
+    .btn--close
+        position: fixed
+        top: 10px
+        right: 10px
+        opacity: 0
+        transition: all 0.2s ease
+
+    .ul--0
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1
+        width: 320px
+        height: 100%
+        max-width: calc(100% - 70px)
+        background: #fff
+        transform: translateX(-320px)
+        opacity: 0
+        transition: all 0.2s ease
+
+    &.on
+        opacity: 1
+        visibility: visible
+
+        .btn--close
+            opacity: 1
+
+        .ul--0
+            transform: translateX(0)
+            opacity: 1
+
+    .a--0, .a--1
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 0 16px
+        min-height: 48px
+        font-size: 12px
+
+    .ul--1
+        background: rgba(0, 0, 0, 0.03)
+
+    li.parent
+        position: relative
+
+        > a
+            margin-right: 48px
+
+        > div
+            display: none
+
+        &:after
+            icon('\f054')
+            position: absolute
+            top: 0
+            right: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 48px
+            height: 48px
+            background: rgba(0, 0, 0, 0.03)
+            transition: all 0.2s ease
+
+        &.on:after
+            transform: rotate(90deg)
+
+@media (min-width: 390px)
+    .categories
+        .btn--close
+            right: auto
+            left: 330px
+
+        &__show
+            width: 48px

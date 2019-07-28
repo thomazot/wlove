@@ -1,0 +1,116 @@
+.banner:not(.banner--nojs) img.d_img
+    min-width: 100%
+
+.banner-grid
+    margin: 50px -16px
+
+    &__figure img
+        min-width: 100%
+
+    &__title
+        font-size: 48px
+        font-family: font-two
+        text-transform: uppercase
+
+    &__text
+        font-size: 20px
+        font-weight: normal
+        color: #6f6f6f
+        line-height: 37px
+
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 168px
+        height: 74px
+        margin-top: 60px
+        background: linear-gradient(-45deg, #6fc9d7, #8d8fb1 35%, #bc97b1, #f5cdad)
+        color: #fff
+        font-size: 15px
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 1px
+
+        &:hover
+            color: #fff
+
+    &__main
+        padding: 20px 10px
+
+@media (min-width: 993px)
+    .banner-grid
+        &__container
+            display: flex
+            align-items: flex-start
+
+        &__figure
+            flex: 1
+            min-width: 0
+
+        &__main
+            flex: 0 0 40%
+            padding: 175px 80px 0
+
+        &__text
+            max-width: 600px
+
+        &__title
+            margin-bottom: 40px
+            margin-left: -105px
+
+    #banner__home_banner_full
+        .banner
+            &__wrapper
+                display: flex !important
+
+                .owl-wrapper-outer
+                    flex: 1
+                    min-width: 0
+
+                .owl-controls
+                    flex: 0 0 140px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                .owl-pagination
+                    display: block
+                    counter-reset: div
+                    width: 100%
+                    text-align: left
+                    padding-left: 20px
+
+                .owl-page
+                    position: relative
+                    font-size: 15px
+                    font-weight: normal
+                    letter-spacing: 1px
+                    padding-left: 45px
+
+                    &:before
+                        position: relative
+                        z-index: 2
+                        counter-increment: div
+                        content: '0' counter(div)
+
+                    &:after
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 0
+                        height: 2px
+                        width: 80px
+                        background: #f7dad0
+                        margin-top: -2px
+                        max-width: 0
+                        transition: all 0.5s ease
+
+                    span
+                        display: none
+
+                    + .owl-page
+                        margin-top: 40px
+
+                    &.active:after
+                        max-width: 80px

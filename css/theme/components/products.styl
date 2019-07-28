@@ -1,0 +1,79 @@
+.products
+    &__item
+        flex: 1 1 270px
+        min-width: 0
+
+    &__title
+        position: relative
+        padding: 45px 0
+        margin: 50px 0
+        font-size: 36px
+        font-weight: bold
+        text-transform: uppercase
+
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 37px
+            height: 2px
+            background: #000
+
+    &__case
+        box-shadow: none
+        text-align: center
+        padding: 15px
+
+        .price-box
+            display: flex
+            justify-content: center
+            align-items: center
+
+        .old-price, .special-price, .regular-price
+            margin-bottom: 0 !important
+            padding: 0 5px
+
+            .label
+                display: none
+
+            .price
+                text-decoration: none
+
+                span
+                    font-size: 12px
+                    font-weight: normal
+                    color: #959494
+
+        .old-price
+            .price span
+                text-decoration: line-through
+
+        .configurable-swatch-list
+            justify-content: center
+
+            img
+                width: 8px
+                height: 8px
+                border-radius: 50%
+
+            a
+                box-shadow: none
+                min-width: 15px
+
+            li
+                padding: 0
+
+        &:hover
+            box-shadow: 0 0 0 1px #f1f1f1
+
+    &__name
+        display: block
+        font-size: 13px
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 1px
+        margin: 15px 0
+
+    &__main
+        height: 115px

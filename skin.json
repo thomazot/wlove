@@ -1,6 +1,6 @@
 {
   "protocol": "http",
-  "host": "test.loja.biz",
+  "host": "wlove.loja.biz",
   "browsers": [">1%"],
   "pxtorem": {
     "rootValue": 16,
@@ -10,8 +10,7 @@
   "backstop": {
     "local": false,
     "id": "backstop_default",
-    "viewports": [
-      {
+    "viewports": [{
         "label": "desktop",
         "width": 1680,
         "height": 700
@@ -24,8 +23,7 @@
     ],
     "onBeforeScript": "chromy/onBefore.js",
     "onReadyScript": "chromy/onReady.js",
-    "scenarios": [
-      {
+    "scenarios": [{
         "label": "Homepage",
         "cookiePath": "backstop_data/engine_scripts/cookies.json",
         "url": "/",

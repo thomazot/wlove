@@ -1,0 +1,70 @@
+.footer
+    font-size: 13px
+    font-weight: normal
+    text-align: center
+    padding: 50px 0
+
+    &-container
+        background: linear-gradient(-45deg, #6fc9d7, #8d8fb1 35%, #bc97b1, #f5cdad)
+
+    &__title
+        display: block
+        padding: 15px 0
+        font-size: 15px
+        font-weight: bold
+        text-transform: uppercase
+
+    &__item, &__phone
+        display: block
+        padding: 10px 0
+        font-size: 13px
+        font-weight: normal
+        line-height: 1
+
+    &__col
+        margin-bottom: 30px
+
+    .mymenu
+        .a--0
+            display: inline-block
+            padding: 10px 0
+            font-size: 13px
+            font-weight: normal
+            line-height: 1
+
+    .socials
+        &__list
+            justify-content: center
+
+        &__link
+            img
+                max-width: none
+                width: auto
+                height: 15px
+
+    .pays
+        &__item
+            img
+                max-width: none
+                width: auto
+                height: 18px
+
+    &__copyright
+        .std
+            font-size: 11px
+            font-weight: normal
+            text-transform: uppercase
+            letter-spacing: 1px
+
+@media (min-width: 993px)
+    .footer
+        &__row
+            display: flex
+            justify-content: space-between
+            text-align: left
+
+            &--copyright
+                align-items: center
+
+        .socials__list
+            justify-content: flex-start

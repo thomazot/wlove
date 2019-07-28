@@ -1,0 +1,23 @@
+.breadcrumb
+    height: 90px
+    background: #fbfbfb
+    margin-top: -50px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    box-shadow: 800px 0 0 #fbfbfb, -800px 0 0 #fbfbfb
+    margin-bottom: 50px !important
+    width: viewport
+    max-width: 100%
+
+    &__link, &__last, &__sep
+        font-size: 11px
+        font-weight: normal
+        color: #959494
+        text-transform: uppercase
+
+    &__home
+        .breadcrumb
+            &__link
+                &:before
+                    display: none

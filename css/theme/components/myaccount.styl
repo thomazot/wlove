@@ -1,0 +1,68 @@
+.header
+    .myaccount
+        position: static
+        height: auto
+        margin: 0
+
+        &__header
+            a
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                min-height: 48px
+                padding: 0 5px
+                font-size: 11px
+                font-weight: bold
+                text-transform: uppercase
+                letter-spacing: 1px
+                color: unquote($color1_bg)
+
+        &__hide
+            margin: 0 0 20px
+
+        &__content
+            position: absolute
+            display: none
+            width: 100%
+            height: 100vh
+            background: #fff
+            padding: 16px
+
+            > .title
+                font-size: 18px
+
+        &__register
+            margin-top: 30px
+
+            .std
+                font-size: 14px
+
+        .btn--back
+            margin: -16px -16px 16px
+
+        &.on
+            .myaccount
+                &__content
+                    display: block
+
+@media (min-width: 993px)
+    .myaccount
+        .header &
+            position: relative
+
+            &:hover
+                .myaccount
+                    &__content
+                        left: auto
+                        right: 0
+                        display: block
+                        width: 290px
+                        max-width: 100vw
+                        height: auto
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.03)
+                        border-radius: 3px
+
+            .myaccount
+                &__header
+                    a
+                        padding: 0 15px

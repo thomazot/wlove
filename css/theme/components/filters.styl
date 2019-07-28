@@ -1,0 +1,28 @@
+.filters
+    &__list
+        background: #ffffff
+
+    &__filter
+        padding: 0
+        box-shadow: none
+
+        &:not(:last-child)
+            margin-bottom: 50px
+
+        &:hover
+            box-shadow: none
+
+    &__name
+        font-size: 15px
+        text-transform: uppercase
+        color: #000
+
+    .link, .a--0, .count
+        font-size: 14px
+        font-weight: regular
+        color: #959494
+
+@media (min-width: 993px)
+    .filters
+        > .title
+            display: none

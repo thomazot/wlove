@@ -1,0 +1,50 @@
+.mymenu
+    .header &
+        flex: 1 
+        min-width: 0
+        margin-left: 45px
+        display: none 
+
+        .ul--0 
+            display: flex 
+            justify-content: space-between
+            align-items: center
+            max-width: 705px
+
+        .a--0 
+            position: relative
+            display: inline-flex
+            justify-content: center 
+            align-items: center
+            min-height: 48px 
+            padding: 0 16px
+            font-size: 11px
+            font-weight: bold 
+            text-transform: uppercase 
+            color: unquote($color1_bg)
+
+            span 
+                position: relative 
+                z-index: 2
+
+            &:before 
+                content: ''
+                position: absolute 
+                top: 50% 
+                left: 0
+                height: 2px 
+                width: 70% 
+                margin-top: -2px
+                background: #f7dad0
+                max-width: 0
+                transition: all .2s ease 
+
+            &:hover
+                color: unquote($color1_bg)
+                &:before 
+                    max-width: 70%
+
+@media (min-width: 993px)
+    .mymenu
+        .header &
+            display: block

@@ -1,0 +1,234 @@
+.product-image-gallery
+    box-shadow: none
+
+.product-image-thumbs
+    .thumb-link
+        box-shadow: none
+
+        &:hover, &.on
+            box-shadow: none
+
+.prod
+    &__name h1
+        font-size: 24px
+
+    &__shop
+        .price-box
+            padding: 50px 0 20px
+
+        .regular-price, .special-price, .old-price
+            .label
+                display: none !important
+
+            .price
+                text-decoration: none
+
+                span
+                    font-size: 16px
+                    font-weight: normal
+                    color: #959494
+
+        .old-price
+            .price span
+                text-decoration: line-through
+
+        .configurable__caption
+            font-size: 14px
+            color: #959494
+
+        .add-to-cart-btn
+            padding: 0
+            height: 55px
+            background: #ffe9e2
+            box-shadow: none
+            font-size: 11px
+            font-weight: normal
+            text-transform: uppercase
+            color: #353535
+            letter-spacing: 2px
+            border-radius: 0
+
+        .qty-wrapper
+            position: relative
+            top: auto
+            left: auto
+            transform: none
+            display: flex
+            justify-content: center
+            align-items: center
+            border: solid 1px #d7d7d7
+
+            &:before
+                content: 'Quantity'
+                font-size: 14px
+                font-weight: normal
+                color: #959494
+
+            input
+                width: 100%
+                font-size: 14px
+                font-weight: normal
+                color: #959494
+                text-align: center
+                background: none
+                border: 0
+                box-shadow: none
+                height: 55px
+
+            .plus, .less
+                display: flex
+                align-items: center
+                width: 30px
+                height: 55px
+                color: #959494
+
+            .plus
+                position: absolute
+                right: 0
+                top: 0
+                justify-content: flex-start
+
+                &:before
+                    transform: rotate(90deg)
+
+            .less
+                position: absolute
+                left: 0
+                top: 0
+                justify-content: flex-end
+
+                &:before
+                    transform: rotate(90deg)
+
+            .input-box
+                position: relative
+                width: 90px
+
+            .bt:hover
+                background: none
+                border-radius: 0
+
+            .bt-box
+                box-shadow: none
+                border-radius: 0
+                position: static
+                transform: none
+
+    &__short-desc
+        font-size: 14px
+        font-weight: normal
+        color: #959494
+        line-height: 30px
+        margin-bottom: 20px
+
+    &__extras
+        font-size: 14px
+        font-weight: normal
+        color: #959494
+        margin-bottom: 50px
+
+        > div
+            padding-bottom: 10px
+
+        strong
+            font-size: 11px
+            font-weight: bold
+            color: #3b3b3b
+
+    &__categories
+        &:before
+            content: 'Category: '
+
+        .product-categories-list, li
+            display: inline
+
+        .product-categories-list
+            li
+                padding-left: 3px
+
+                &:before
+                    content: ', '
+
+                &:first-child:before
+                    display: none
+
+.tabs__tab.on, .tabs__tab, .add-to-links a
+    font-weight: normal
+    font-size: 14px
+    color: #000
+
+@media (min-width: 569px)
+    .tabs__tab, .tabs__tab.on
+        font-size: 11px
+        font-weight: normal
+        text-transform: uppercase
+        letter-spacing: 2px
+        border-color: transparent
+        text-align: left
+        padding: 0 15px 0 0
+
+    .tabs__tab.on
+        box-shadow: 0 1px 0 #000
+
+    .tabs__content
+        border-color: transparent
+        border-top-color: #ededed
+        padding: 20px 0
+
+        .std
+            font-size: 14px
+            font-weight: normal
+            color: #959494
+            line-height: 30px
+
+    .link-wishlist
+        a
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            box-shadow: none
+            font-size: 11px
+            font-weight: bold
+            text-transform: uppercase
+            letter-spacing: 2px
+
+            &:before
+                icon('\f004')
+                color: #fff
+                text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000
+                font-size: 15px
+                margin-right: 5px
+
+            &:after
+                content: 'whishlist'
+
+            span
+                display: none
+
+@media (min-width: 993px)
+    .prod__img
+        flex: 0 0 60%
+
+    .product-image-container
+        display: flex
+
+    .more-views
+        order: -1
+        width: 140px
+
+    .product-image-thumbs
+        display: block
+
+    .add-to-cart-buttons
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .qty-wrapper
+            flex: 1 1 195px
+            margin: 0 40px 0 0
+            min-width: 195px
+
+        .add-to-cart-btn
+            flex: 1 1 50%
+            min-width: 0
